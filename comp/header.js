@@ -1,14 +1,21 @@
 import Link from 'next/link';
-const linkStyle = {
-  marginRight: 15
+import Button from './button';
+import Whiteboard from './whiteBoard';
+const headStyles = {
+  borderBottom:"1px solid #DDD",
+  paddingBottom:5
 };
 const Header = () => (
-    <div>
+    <div style={headStyles}>
     <Link href="/">
-      <a style={linkStyle}>Home</a>
+      <Whiteboard name="Whiteboard CROSSFIT RIVNE"/>
+    </Link>
+
+    <Link href="/">
+      <Button name="Home"/>
     </Link>
     <Link href="/about">
-      <a style={linkStyle}>About</a>
+      <Button name="About"/>
     </Link>
   </div>
   );
